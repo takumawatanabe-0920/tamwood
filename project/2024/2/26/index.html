@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>I had blueberry pie before class.</p>
+    <p id="the-second-paragraph">I saw an old man on the TTC subway.</p>
+
+    <script>
+      console.log('Hello, this is Takuma')
+      let p1 = document.querySelector('p')
+
+      let p2 = document.querySelector('#the-second-paragraph')
+
+      p2.addEventListener('click', function () {
+        p1.style.fontWeight = 'bold'
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="number1" />
+    <input type="text" id="number" />
+    <button>Calculate</button>
+    <span id="result"></span>
+    <script>
+      const input1 = document.querySelector('#number1')
+      const input2 = document.querySelector('#number')
+      const myButton = document.querySelector('button')
+      const output = document.querySelector('#result')
+
+      myButton.addEventListener('click', function () {
+        let num1 = input1.value
+        let num2 = input2.value
+        output.innerHTML = add(num1, num2)
+      })
+
+      function add(num1, num2) {
+        return Number(num1) + Number(num2)
+      }
+    </script>
+  </body>
+</html>

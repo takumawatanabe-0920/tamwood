@@ -1,0 +1,394 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+video,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* reset css end */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* css reset end */
+
+.hamburger {
+  display: none;
+}
+
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.section-title-wrapper h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-title-wrapper p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  background: #000;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+header .navigation-bar {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navigation-bar .nav-left {
+  width: 200px;
+}
+
+header .navigation-bar .nav-left img {
+  width: 100%;
+}
+
+header .navigation-bar .nav-right {
+}
+
+header .navigation-bar .nav-right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+header .navigation-bar .nav-right ul li {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+header .navigation-bar .nav-right ul li button {
+  border: none;
+  background: #000;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.top-content {
+  padding: 80px 0;
+}
+
+.top-content .top-content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.top-content .top-content-container .top-content-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.top-content .top-content-container .top-content-wrapper h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.top-content .top-content-container .top-content-wrapper p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.top-content .top-content-container .top-img-wrapper img {
+  width: 100%;
+}
+
+.cutting-edge-content .cutting-edge-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cutting-edge-content .cutting-edge-container .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cutting-edge-content .cutting-edge-container .content .card {
+  width: 32%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.cutting-edge-content .cutting-edge-container .content .card .card-img-wrapper {
+  width: 20%;
+}
+
+.cutting-edge-content .cutting-edge-container .content .card .card-content {
+  width: 75%;
+}
+
+.cutting-edge-content .cutting-edge-container .content .number {
+  padding: 5px 15px;
+  background: #000;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.review-content {
+  padding: 80px 0;
+}
+
+.review-content .review-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.review-content .review-container .review-content-wrapper {
+  border-bottom: 1px solid #ccc;
+}
+
+.review-content .review-container .reviewer-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.review-content .review-container .reviewer-list .user-item {
+  width: 20%;
+  text-align: center;
+}
+
+.review-content .review-container .reviewer-list .user-item .user-img-wrapper {
+  margin-bottom: 20px;
+}
+
+.review-content .review-container .reviewer-list .user-item h3 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+}
+
+.review-content .review-container .reviewer-list .user-item .user-content {
+  margin-bottom: 20px;
+}
+
+.review-content .review-container .reviewer-list .user-item p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.review-content .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-content .star .img {
+  margin-right: 2px;
+}
+
+.bottom-img {
+}
+
+.bottom-img img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+  }
+
+  header {
+    padding: 0;
+    height: 100%;
+  }
+
+  header .navigation-bar .nav-right {
+    display: none;
+  }
+
+  .top-content {
+    padding: 80px 15px;
+  }
+
+  .cutting-edge-content .cutting-edge-container .content {
+    display: block;
+  }
+
+  .cutting-edge-content .cutting-edge-container .content .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .review-content {
+    padding: 80px 15px;
+  }
+
+  .review-content .review-container .reviewer-list {
+    display: block;
+  }
+
+  .review-content .review-container .reviewer-list .user-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .review-content
+    .review-container
+    .reviewer-list
+    .user-item
+    .user-img-wrapper {
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+  }
+}

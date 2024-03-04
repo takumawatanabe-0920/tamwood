@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div#menu {
+        left: 40px;
+        position: absolute;
+        padding: 10px;
+        background: lightgray;
+        max-width: 300px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Test page</p>
+    <button id="button-header">Click Me</button>
+    <button id="hide-menu-button">Hide menu</button>
+    <div id="menu">
+      <ul>
+        <li><button id="button1">Button 1</button></li>
+        <li><button id="button2">Button 2</button></li>
+        <li><button id="button3">Button 3</button></li>
+      </ul>
+    </div>
+    <div id="text1">This is my test page. I'm making pop up menus.</div>
+
+    <script src="./header-menu.js"></script>
+    <script src="./exercise.js"></script>
+    <script>
+      'use strict'
+
+      let button = document.querySelector('#button-header')
+      let menu = document.querySelector('#menu')
+      menu.classList.add('hidden')
+
+      button.addEventListener('click', function () {
+        console.log('Button clicked')
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden')
+        } else {
+          menu.classList.add('hidden')
+        }
+      })
+
+      let button1 = document.querySelector('#button1')
+      let button2 = document.querySelector('#button2')
+      let button3 = document.querySelector('#button3')
+      let buttonHeader = document.querySelector('#button-header')
+      let text1 = document.querySelector('#text1')
+
+      button1.addEventListener('click', function () {
+        text1.style.display = 'none'
+      })
+
+      button2.addEventListener('click', function () {
+        text1.style.display = 'block'
+      })
+
+      button3.addEventListener('click', function () {
+        buttonHeader.style.display = 'none'
+      })
+
+      // document.addEventListener('click', function (e) {
+      //   if (!menu.contains(e.target) && !buttonHeader.contains(e.target)) {
+      //     menu.classList.add('hidden')
+      //   }
+      // })
+
+      let hideMenuButton = document.querySelector('#hide-menu-button')
+
+      hideMenuButton.addEventListener('click', function () {
+        let buttons = document.querySelectorAll('#menu button')
+        for (const button of buttons) {
+          button.classList.add('hidden')
+        }
+      })
+
+      // assignment
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+div {
+  background-color: aqua;
+  display: inline;
+}
+
+img {
+  display: inline-block;
+  float: left;
+  width: 200px;
+}
+
+.other-button {
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: blueviolet;
+  color: white;
+  box-shadow: 10px 10px 15px #333;
+}

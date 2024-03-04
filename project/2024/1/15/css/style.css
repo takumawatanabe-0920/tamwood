@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent-container {
+  border: 1px solid red;
+  height: 500px;
+  display: grid;
+  grid-template-areas:
+    'top-row top-row top-row'
+    'left-sidebar right-content right-content';
+}
+
+.top-row {
+  background-color: aqua;
+  grid-area: top-row;
+}
+
+.left-sidebar {
+  background-color: orange;
+  grid-area: left-sidebar;
+}
+
+.right-content {
+  background-color: yellow;
+  grid-area: right-content;
+}

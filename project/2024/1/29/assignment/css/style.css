@@ -1,0 +1,42 @@
+.top-section {
+  position: relative;
+  height: 100%;
+}
+
+.top-section-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  padding-top: 80px;
+}
+
+.bottom-container {
+  padding-bottom: 80px;
+}
+
+.top-section-container {
+  height: 100vh;
+  padding: 0;
+}
+
+.top-section-container .carousel {
+  height: 100%;
+}
+
+.top-section-container .carousel .carousel-item {
+  height: 100%;
+}
+
+.top-section-container .carousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}

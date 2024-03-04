@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap big assignment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark-900">
+        <div class="container">
+          <a class="logo" href="#">
+            <!-- Replace with your image path -->
+            <img src="img/logo.png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+            style="flex-grow: 0;"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ABOUT
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ABOUT
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  EPISODES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  SHOWS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- top section -->
+    <section
+      class="hero-section"
+      style="background-image: url('img/top-image.png');"
+    >
+      <div class="container p-4 text-white">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-12 col-lg-6">
+            <h1 class="display-5 fw-bold top-title">Rebrand Your Podcast.</h1>
+            <p class="lead">
+              Explore the must-have
+              <a href="#" class="link">Podcasting features</a> of Tusant. A
+              sleek & powerful WordPress Podcast Theme.
+            </p>
+            <div class="my-4 btn-wrapper">
+              <a href="#" class="btn btn-success">SUBSCRIBE</a>
+              <a href="#" class="btn btn-outline-light">ALL EPISODES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Episodes Section using Cards -->
+    <section class="episode-section bg-dark text-white">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-12">
+            <h2 class="display-7 fw-bold mb-4">Our Episodes</h2>
+            <p class="lead">
+              Sd velit sapien, commando et dictum porta, varius id nibh. Vivamus
+              sed sapien molestie maximus lorem ut commodo enim.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="img-wrapper">
+                <img
+                  src="img/episode1.png"
+                  class="card-img-top"
+                  alt="episode 1"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Episode 03: The Future of JS</h5>
+                <div class="card-info d-flex align-items-center">
+                  <span>DECEMBER 7</span>
+                  <span>/</span>
+                  <span>ADMIN</span>
+                  <span>/</span>
+                  <span>WEB DESIGN SHOW</span>
+                  <span>/</span>
+                  <span>00:02:16</span>
+                  <span>/</span>
+                  <span>0 COMMENTS</span>
+                </div>
+                <p class="card-text">
+                  A wonderful serenity has taken possession of my entire soul,
+                  like these sweet mornings of spring which I enjoy with my
+                  whole heart.
+                </p>
+                <div class="audio-img-wrapper">
+                  <img src="img/audio.png" alt="audio img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="img-wrapper">
+                <img
+                  src="img/episode2.png"
+                  class="card-img-top"
+                  alt="episode 2"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Episode 03: The Future of JS</h5>
+                <div class="card-info d-flex align-items-center">
+                  <span>DECEMBER 7</span>
+                  <span>/</span>
+                  <span>ADMIN</span>
+                  <span>/</span>
+                  <span>WEB DESIGN SHOW</span>
+                  <span>/</span>
+                  <span>00:02:16</span>
+                  <span>/</span>
+                  <span>0 COMMENTS</span>
+                </div>
+                <p class="card-text">
+                  A wonderful serenity has taken possession of my entire soul,
+                  like these sweet mornings of spring which I enjoy with my
+                  whole heart.
+                </p>
+                <div class="audio-img-wrapper">
+                  <img src="img/audio.png" alt="audio img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="img-wrapper">
+                <img
+                  src="img/episode3.png"
+                  class="card-img-top"
+                  alt="episode 3"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Episode 03: The Future of JS</h5>
+                <div class="card-info d-flex align-items-center">
+                  <span>DECEMBER 7</span>
+                  <span>/</span>
+                  <span>ADMIN</span>
+                  <span>/</span>
+                  <span>WEB DESIGN SHOW</span>
+                  <span>/</span>
+                  <span>00:02:16</span>
+                  <span>/</span>
+                  <span>0 COMMENTS</span>
+                </div>
+                <p class="card-text">
+                  A wonderful serenity has taken possession of my entire soul,
+                  like these sweet mornings of spring which I enjoy with my
+                  whole heart.
+                </p>
+                <div class="audio-img-wrapper">
+                  <img src="img/audio.png" alt="audio img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="img-wrapper">
+                <img
+                  src="img/episode4.png"
+                  class="card-img-top"
+                  alt="episode 4"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Episode 03: The Future of JS</h5>
+                <div class="card-info d-flex align-items-center">
+                  <span>DECEMBER 7</span>
+                  <span>/</span>
+                  <span>ADMIN</span>
+                  <span>/</span>
+                  <span>WEB DESIGN SHOW</span>
+                  <span>/</span>
+                  <span>00:02:16</span>
+                  <span>/</span>
+                  <span>0 COMMENTS</span>
+                </div>
+                <p class="card-text">
+                  A wonderful serenity has taken possession of my entire soul,
+                  like these sweet mornings of spring which I enjoy with my
+                  whole heart.
+                </p>
+                <div class="audio-img-wrapper">
+                  <img src="img/audio.png" alt="audio img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="img-wrapper">
+                <img
+                  src="img/episode5.png"
+                  class="card-img-top"
+                  alt="episode 5"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Episode 03: The Future of JS</h5>
+                <div class="card-info d-flex align-items-center">
+                  <span>DECEMBER 7</span>
+                  <span>/</span>
+                  <span>ADMIN</span>
+                  <span>/</span>
+                  <span>WEB DESIGN SHOW</span>
+                  <span>/</span>
+                  <span>00:02:16</span>
+                  <span>/</span>
+                  <span>0 COMMENTS</span>
+                </div>
+                <p class="card-text">
+                  A wonderful serenity has taken possession of my entire soul,
+                  like these sweet mornings of spring which I enjoy with my
+                  whole heart.
+                </p>
+                <div class="audio-img-wrapper">
+                  <img src="img/audio.png" alt="audio img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="img-wrapper">
+                <img
+                  src="img/episode6.png"
+                  class="card-img-top"
+                  alt="episode 6"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Episode 03: The Future of JS</h5>
+                <div class="card-info d-flex align-items-center">
+                  <span>DECEMBER 7</span>
+                  <span>/</span>
+                  <span>ADMIN</span>
+                  <span>/</span>
+                  <span>WEB DESIGN SHOW</span>
+                  <span>/</span>
+                  <span>00:02:16</span>
+                  <span>/</span>
+                  <span>0 COMMENTS</span>
+                </div>
+                <p class="card-text">
+                  A wonderful serenity has taken possession of my entire soul,
+                  like these sweet mornings of spring which I enjoy with my
+                  whole heart.
+                </p>
+                <div class="audio-img-wrapper">
+                  <img src="img/audio.png" alt="audio img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-success">More Episodes</button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="child-section bg-dark-900 text-white text-center text-lg-start"
+    >
+      <div class="container p-4">
+        <div
+          class="row g-4 align-items-center flex-md-column-reverse flex-lg-row"
+        >
+          <div class="col-lg-6">
+            <h2 class="display-7 fw-bold mb-4">Latest From Instagram</h2>
+            <p class="lead">
+              Follow updates and new stories on our instagram channel.
+              <br /><br />
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+              corporis ad eius cupiditate hic totam culpa qui excepturi, ullam
+              ex quibusdam earum error, beatae ea! Error accusamus nesciunt
+              distinctio quas!
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              voluptatem porro, repellendus nisi et deleniti hic labore. Harum
+              doloremque velit officiis, quisquam fugit magnam autem! Libero
+              dicta laboriosam voluptatibus doloremque.
+            </p>
+            <div>
+              <a href="#" class="btn btn-success">FOLLOW US</a>
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-block mb-md-4">
+            <img src="img/child.png" class="img-fluid" alt="child" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Show host -->
+    <section class="show-host bg-dark text-white">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-12">
+            <h2 class="display-7 fw-bold mb-4">Show Hosts</h2>
+            <p class="lead">
+              Sd velit sapien, commando et dictum porta, varius id nibh. Vivamus
+              sed sapien molestie maximus lorem ut commodo enim.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card-wrapper col-sm-6 col-md-4 mb-4">
+            <a class="card bg-dark-900" href="#">
+              <img src="img/host1.png" class="card-img-top" alt="host image" />
+              <div class="card-body">
+                <h5 class="card-title text-white fw-bold">Germaine Jones</h5>
+                <div class="sns-wrapper mt-3">
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card-wrapper col-sm-6 col-md-4 mb-4">
+            <a class="card bg-dark-900" href="#">
+              <img src="img/host2.png" class="card-img-top" alt="host image" />
+              <div class="card-body">
+                <h5 class="card-title text-white fw-bold">Leonardo Bunk</h5>
+                <div class="sns-wrapper mt-3">
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card-wrapper col-sm-6 col-md-4 mb-4">
+            <a class="card bg-dark-900" href="#">
+              <img src="img/host3.png" class="card-img-top" alt="host image" />
+              <div class="card-body">
+                <h5 class="card-title text-white fw-bold">Fred Morton</h5>
+                <div class="sns-wrapper mt-3">
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="sns-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- images -->
+    <section class="image-section bg-dark text-white">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="image-item">
+            <img src="img/record.png" alt="record" />
+          </div>
+          <div class="image-item">
+            <img src="img/edit.png" alt="edit" />
+          </div>
+          <div class="image-item">
+            <img src="img/publish.png" alt="publish" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Shows -->
+    <section class="our-shows bg-dark text-white">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-12">
+            <h2 class="display-7 fw-bold mb-4">Our Shows</h2>
+            <p class="lead">
+              Sed velit sapien, commodo et dictum porta, varius id nibh. Vivamus
+              sed sapien molestie maximus lorem ut commodo enim.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <div class="col-md-3">
+                    <div class="card bg-transparent">
+                      <img
+                        src="img/show1.png"
+                        class="card-img-top"
+                        alt="The SEO Show"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">The SEO Show</h5>
+                        <div class="card-user-wrapper">
+                          <div class="card-user-left">
+                            <img src="img/user.png" alt="use image" />
+                          </div>
+                          <div class="card-user-right">
+                            <span>Hosted By</span>
+                            <h6 class="card-user-name">Loretta James</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card bg-transparent">
+                      <img
+                        src="img/show2.png"
+                        class="card-img-top"
+                        alt="The SEO Show"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">The SEO Show</h5>
+                        <div class="card-user-wrapper">
+                          <div class="card-user-left">
+                            <img src="img/user.png" alt="use image" />
+                          </div>
+                          <div class="card-user-right">
+                            <span>Hosted By</span>
+                            <h6 class="card-user-name">Loretta James</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card bg-transparent">
+                      <img
+                        src="img/show1.png"
+                        class="card-img-top"
+                        alt="The SEO Show"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">The SEO Show</h5>
+                        <div class="card-user-wrapper">
+                          <div class="card-user-left">
+                            <img src="img/user.png" alt="use image" />
+                          </div>
+                          <div class="card-user-right">
+                            <span>Hosted By</span>
+                            <h6 class="card-user-name">Loretta James</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card bg-transparent">
+                      <img
+                        src="img/show2.png"
+                        class="card-img-top"
+                        alt="The SEO Show"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">The SEO Show</h5>
+                        <div class="card-user-wrapper">
+                          <div class="card-user-left">
+                            <img src="img/user.png" alt="use image" />
+                          </div>
+                          <div class="card-user-right">
+                            <span>Hosted By</span>
+                            <h6 class="card-user-name">Loretta James</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev bg-transparent w-aut"
+                href="#carousel"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+              <a
+                class="carousel-control-next bg-transparent w-aut"
+                href="#carousel"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="subscribe-section"
+      style="background-image: url('img/subscribe.png');"
+    >
+      <div class="container p-4 text-white">
+        <div class="row g-4">
+          <div class="col-12 text-center">
+            <h2 class="display-7 fw-bold mb-4">
+              Subscribe to Our Mailing List
+            </h2>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto alias eaque ratione maiores magni. <br />
+              Quidem quisquam libero cupiditate quis? Repellendus dolorum modi
+              velit recusandae similique in voluptatem. Vel, voluptatem maiores.
+            </p>
+          </div>
+        </div>
+        <div class="subscribe-form row g-4">
+          <div class="col-12">
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your email address"
+                  aria-label="Your Email"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-success"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white-50">
+      <div class="container">
+        <div class="row">
+          <div class="explain-content item col-md-3">
+            <div class="logo mb-4">
+              <img src="img/logo.png" alt="logo" />
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut a
+              libero qui corrupti, ratione earum delectus similique facilis? Id
+              dolores adipisci nihil hic soluta autem, delectus qui nisi vitae
+              tempore.
+            </p>
+
+            <div class="sns-wrapper">
+              <a href="#" class="sns-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="sns-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="sns-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="sns-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="item col-md-3">
+            <h5>Recent Episodes</h5>
+            <ul class="footer-episode-list list-unstyled">
+              <li>
+                <a href="#" class="footer-episode"
+                  >Episode 01: The Future of JS</a
+                >
+                <span>DECEMBER 7, 2019</span>
+              </li>
+              <li>
+                <a href="#" class="footer-episode"
+                  >Episode 02: The Future of JS</a
+                >
+                <span>DECEMBER 7, 2019</span>
+              </li>
+              <li>
+                <a href="#" class="footer-episode"
+                  >Episode 03: The Future of JS</a
+                >
+                <span>DECEMBER 7, 2019</span>
+              </li>
+              <li>
+                <a href="#" class="footer-episode"
+                  >Episode 04: The Future of JS</a
+                >
+                <span>DECEMBER 7, 2019</span>
+              </li>
+            </ul>
+          </div>
+          <div class="page-links item col-md-3">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li>
+                <div class="img-wrapper">
+                  <img src="img/file.png" alt="file image" />
+                </div>
+                <a href="#">HomePage</a>
+              </li>
+              <li>
+                <div class="img-wrapper">
+                  <img src="img/file.png" alt="file image" />
+                </div>
+                <a href="#">OurEpisodes</a>
+              </li>
+              <li>
+                <div class="img-wrapper">
+                  <img src="img/file.png" alt="file image" />
+                </div>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <div class="img-wrapper">
+                  <img src="img/file.png" alt="file image" />
+                </div>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <div class="img-wrapper">
+                  <img src="img/file.png" alt="file image" />
+                </div>
+                <a href="#">Our Shows</a>
+              </li>
+            </ul>
+          </div>
+          <div class="item col-md-3">
+            <h5>Instagram Feed</h5>
+            <div class="child-img-wrapper">
+              <img src="img/child.png" alt="child image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"
+      integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

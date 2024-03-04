@@ -1,0 +1,28 @@
+:root {
+  --color-primary: hsl(248, 51%, 51%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50rem;
+}
+
+.div-var {
+  margin-top: 2rem;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-primary);
+}

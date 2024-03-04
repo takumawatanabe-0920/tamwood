@@ -1,0 +1,252 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+video,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* reset css end */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 10px 20px;
+  background-color: #af5c4b;
+}
+
+header .navigation-bar {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navigation-bar .nav-left {
+  width: 200px;
+}
+
+header .navigation-bar .nav-left img {
+  width: 100%;
+}
+
+header .navigation-bar .nav-right {
+  color: #fff;
+}
+
+header .navigation-bar .nav-right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+header .navigation-bar .nav-right ul li {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+/* css reset end */
+
+.main-content {
+  padding: 80px 0px;
+}
+
+.main-content .main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.parent-container {
+  display: grid;
+  grid-template-areas:
+    'top-content top-content top-content'
+    'left-item middle-item right-item';
+
+  /* gap */
+  grid-row-gap: 70px;
+  grid-column-gap: 20px;
+}
+
+.top-content {
+  background-color: #d97d4f;
+  grid-area: top-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.top-content .top-text-wrapper {
+  padding: 40px 30px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-content .top-text-wrapper h2 {
+  border-bottom: 4px solid #fff;
+  display: inline;
+  width: 110px;
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+
+.top-content .top-text-wrapper p {
+  margin-bottom: 20px;
+}
+
+.top-content .top-text-wrapper .btn button {
+  background: #d97d4f;
+  width: 250px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 4px solid #fff;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.left-item {
+  background-color: #d97d4f;
+  grid-area: left-item;
+  height: 100%;
+}
+
+.middle-item {
+  background-color: #af5c4b;
+  grid-area: middle-item;
+  height: 100%;
+}
+
+.right-item {
+  background-color: #173a38;
+  grid-area: right-item;
+  height: 100%;
+}
+
+.main-content .text-wrapper {
+  padding: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.main-content .img-wrapper {
+  width: 100%;
+}

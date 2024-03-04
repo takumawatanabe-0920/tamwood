@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+
+.main-logo {
+  width: 100px;
+}
+
+.login {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+}
+
+.registry {
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #02b4c0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.promo {
+  background-color: #c9143f;
+  padding: 5px 0;
+}
+
+.promo p {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.promo-bold {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.header-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.hero-banner {
+  background-color: #e6e6e6;
+}
+
+.hero-banner-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+}
+
+.hero-banner-content {
+  width: 50%;
+}
+
+.hero-banner-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.hero-banner-text {
+  color: gray;
+}
+
+.zola-benefit-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.zola-benefit-item {
+  width: 22%;
+}
+
+.zola-benefit-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.zola-benefit-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}

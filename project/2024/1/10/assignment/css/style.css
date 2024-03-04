@@ -1,0 +1,676 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+video,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* reset css end */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* common start */
+.sns-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.sns-wrapper .sns-icon {
+  padding-left: 20px;
+}
+
+.contact-wrapper {
+}
+
+.contact-wrapper .contact-btn {
+  padding: 15px 45px;
+  background-color: transparent;
+  border: 2px solid #7f7f7f;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 35px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.under-line {
+  position: relative;
+  width: 170px;
+  height: 1px;
+  margin: 13px auto 0px;
+  margin-bottom: 30px;
+  background-color: #6a7ff9;
+}
+
+.under-line .line-up {
+  position: absolute;
+  line-height: 1;
+  left: 1px;
+  width: 100%;
+  top: -9px;
+}
+
+.under-line .line-up .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  transform: rotate(-40deg);
+  margin-right: 1px;
+  background-color: #6a7ff9;
+}
+
+/* common end */
+
+/* header start */
+
+header {
+  background-image: url('../img/bg-home-1.png');
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  height: 100vh;
+  padding: 20px 10px;
+}
+
+/* overlay */
+header::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+header .main-header {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+header .main-header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .main-header nav ul {
+  display: flex;
+}
+
+header .main-header nav ul li {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.hamburger {
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.top-content {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.top-content .top-content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.top-content .top-content-container h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+/* header end */
+
+/* about-me-content start */
+.about-me-content {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.about-me-content .about-me-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me-content .about-me-container .section-title-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-me-content .about-me-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-content .about-me-container .content p {
+  margin-bottom: 30px;
+}
+
+.about-me-content .about-me-container .content .buttons-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-content .about-me-container .content .buttons-wrapper .btn {
+  margin-right: 20px;
+  padding: 15px 45px;
+  border: 1px solid #6a7ff9;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #6a7ff9;
+  border-radius: 5px;
+}
+
+.about-me-content .about-me-container .content .thumbnail {
+  margin-bottom: 30px;
+}
+
+.about-me-content .about-me-container .content .thumbnail h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-me-content .about-me-container .content .thumbnail img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 1px #000;
+  margin-bottom: 30px;
+}
+
+/* my-servers-content start */
+.my-servers-content {
+  padding: 80px 0;
+}
+
+.my-servers-content .my-servers-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.my-servers-content .my-servers-container .section-title-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.my-servers-content .my-servers-container .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.my-servers-content .my-servers-container .content .card {
+  width: 32%;
+  padding: 30px 15px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #eee;
+  margin-top: 30px;
+  box-shadow: 0 10px 50px rgba(20, 50, 47, 0.03),
+    0 10px 40px rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-servers-content .my-servers-container .content .card .card-icon {
+  width: 20%;
+}
+
+.my-servers-content .my-servers-container .content .card .text-content {
+  width: 75%;
+}
+
+.record-section {
+  padding: 80px 0;
+  background-color: #6a7ff9;
+}
+
+.record-section .record-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.record-section .record-container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-section .counter-icon {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.record-section .counter-value {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.record-section .counter-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.record-section .item {
+  text-align: center;
+  color: #fff;
+}
+
+.record-section .counter-value {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.record-section .counter-name {
+  font-size: 18px;
+}
+
+/* experience-section start */
+.experience-section {
+  padding: 80px 0;
+}
+
+.experience-section .experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.experience-section .experience-container .section-title-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.experience-section .experience-container .timeline-wrapper {
+  position: relative;
+  margin-top: 30px;
+}
+
+.experience-section .experience-container .timeline-wrapper::after {
+  background-color: #6a7ff9;
+  content: '';
+  height: 95%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+}
+
+.experience-section .experience-container .timeline-wrapper .timeline {
+  margin-bottom: 50px;
+}
+
+.time-line-reverse .row {
+  flex-direction: row-reverse;
+}
+
+.experience-section .experience-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.experience-section .experience-container .row .left {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.experience-section .experience-container .row .btn-content {
+  flex: 0 0 50%;
+  max-width: 180px;
+  text-align: center;
+  border-radius: 42px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 32px;
+  position: relative;
+  text-align: center;
+  border: 5px solid rgba(255, 255, 255, 0.48);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+  background-color: #6a7ff9;
+}
+
+.experience-section .experience-container .row .btn-content-right {
+  margin-right: auto;
+  margin-left: 25px;
+}
+
+.experience-section .experience-container .row .btn-content-right::after {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  content: '';
+  height: 20px;
+  left: -41px;
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  z-index: 1;
+  background-color: #6a7ff9;
+}
+
+.experience-section .experience-container .row .btn-content-left {
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.experience-section .experience-container .row .btn-content-left::after {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  content: '';
+  height: 20px;
+  right: -41px;
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  z-index: 1;
+  background-color: #6a7ff9;
+}
+
+.experience-section .experience-container .row .right {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.experience-section .experience-container .row .text-content {
+  text-align: left;
+  margin-left: 15px;
+  float: left;
+  -webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 20px;
+}
+
+.experience-section .experience-container .row .text-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.experience-section .experience-container .row .text-content p {
+  line-height: 26px;
+  font-size: 15px;
+  color: #666;
+}
+
+/* footer start */
+footer {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+footer .footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer .footer-container .sns-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+footer .footer-container .sns-links a {
+  text-decoration: none;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  margin-top: 50px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 40px;
+  margin-top: 50px;
+  margin: 3px;
+  text-align: center;
+}
+
+footer .footer-container .sns-links .face-book-link {
+  background-color: #3162a2;
+}
+
+footer .footer-container .sns-links .twitter-link {
+  background-color: #1da1f2;
+}
+
+footer .footer-container .sns-links .instagram-link {
+  background-color: #e1306c;
+}
+
+footer .footer-container .sns-links .github-link {
+  background-color: #333;
+}
+
+footer .footer-container .sns-links .linkedin-link {
+  background-color: #0077b5;
+}
+
+footer .footer-container .sign {
+  color: #898989;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* footer end */
+
+@media (max-width: 768px) {
+  header {
+    padding: 0;
+    height: 100%;
+  }
+
+  header .main-header {
+    background-color: #000;
+    padding: 15px;
+  }
+
+  header .main-header nav {
+    display: none;
+  }
+
+  header .top-content {
+    padding: 40px 20px 80px;
+  }
+
+  .top-content .top-content-container h1 {
+    font-size: 30px;
+  }
+
+  .my-servers-content .my-servers-container .content .card {
+    width: 100%; /* or some other percentage or fixed width */
+    margin: 30px 0; /* Adjust margins as needed */
+  }
+
+  .about-me-content {
+    padding: 80px 15px;
+  }
+
+  .my-servers-content {
+    padding: 80px 15px;
+  }
+
+  .about-me-content .about-me-container .content .buttons-wrapper {
+    display: block;
+  }
+
+  .about-me-content .about-me-container .content .buttons-wrapper .btn {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .record-section .record-container .content {
+    display: block;
+  }
+
+  .record-section .record-container .item {
+    margin-bottom: 30px;
+  }
+
+  .experience-section .experience-container {
+    padding: 0 15px;
+  }
+
+  .experience-section .experience-container .row .btn-content {
+    font-size: 14px;
+  }
+}

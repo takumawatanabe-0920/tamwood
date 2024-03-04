@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="lookupUser" />
+    <input type="text" id="lookupProp" />
+    <button>Look Up</button>
+    <span id="result"></span>
+
+    <script>
+      const inputUser = document.querySelector('#lookupUser')
+      const inputProp = document.querySelector('#lookupProp')
+      const myButton = document.querySelector('button')
+      const output = document.querySelector('#result')
+
+      const address = [
+        {
+          firstName: 'Thomas',
+          lastName: 'Ngo',
+          email: 'tngo@tamwoodonline.com',
+          likes: ['indie games', 'board games', 'TikTok'],
+        },
+        {
+          firstName: 'James',
+          lastName: 'Bond',
+          email: 'jbond@secret.com',
+          likes: ['high stealth missions', 'high risk', 'high reward'],
+        },
+        {
+          firstName: 'Takuma',
+          lastName: 'Watanabe',
+          email: 'takumaozk0920@gmail.com',
+          likes: ['Tennis', 'Soccer', 'Basketball'],
+        },
+        {
+          firstName: 'Levi',
+          lastName: 'Ackerman',
+          email: 'Levi@gmail.com',
+          likes: ['Tennis', 'Soccer', 'Basketball'],
+        },
+      ]
+
+      myButton.addEventListener('click', function () {
+        let user = inputUser.value
+        let prop = inputProp.value
+        console.log({ user, prop })
+        output.innerHTML = lookup(user, prop)
+      })
+
+      function lookup(user, prop) {
+        for (let i = 0; i < address.length; i++) {
+          if (address[i].firstName === user) {
+            return address[i][prop] || 'No such property'
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

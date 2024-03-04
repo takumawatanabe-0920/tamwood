@@ -1,0 +1,25 @@
+.parent-container {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+  justify-content: start;
+}
+
+div {
+  height: 200px;
+}
+
+.div-01 {
+  background-color: rgb(0, 0, 255);
+  flex-grow: 1;
+}
+
+.div-02 {
+  background-color: rgb(255, 0, 0);
+  flex-grow: 2;
+}
+
+.div-03 {
+  background-color: rgb(0, 255, 0);
+  flex-grow: 1;
+}

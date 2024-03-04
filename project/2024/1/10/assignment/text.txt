@@ -1,0 +1,27 @@
+1. Tell me about yourself and why you became a Web Developer?
+2. How do you plan a web development project?
+3. What do you like and dislike the most about web development?
+4. Describe a time when you failed as a web developer?
+5. What is the role of a web developer?
+6. Tell me a time when you provided outstanding customer or client service as a web developer?
+7. How do you keep up to date with your web development knowledge and industry advancements?
+8. What inspired you to pursue a career in full-stack development?
+9. Can you describe some projects you've worked on and your role in them?
+10. How do you manage tight deadlines?
+11. What programming languages and frameworks are you most comfortable with?
+12. What are your career goals?
+13. How do you handle stress and pressure?
+14. What are your strengths and weaknesses?
+15. Tell me about a time you showed leadership.
+16. Tell me about a time you were successful on a team.
+17. What would your co-workers say about you?
+18. Describe your most challenging project.
+19. Tell me about something you’ve accomplished that you are proud of.
+20. Where do you see yourself in 5 years?
+21. Tell me about a time you worked with a difficult person.
+22. Tell me about a time you had to persuade someone.
+23. Tell me about a time you disagreed with someone.
+24. Tell me about a time you created a goal and achieved it.
+25. Tell me about a time you surpassed people’s expectations.
+26. Tell me about a time you had to handle pressure.
+27. Tell me about a time you had to learn something quickly.

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent-container {
+  width: 100%;
+  border: 1px solid red;
+}
+
+.left {
+  height: 100px;
+  background-color: aqua;
+}
+
+.right {
+  height: 100px;
+  background-color: orange;
+}
+
+@media (min-width: 768px) {
+  .parent-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .left {
+    width: 50%;
+  }
+  .right {
+    width: 50%;
+  }
+}
