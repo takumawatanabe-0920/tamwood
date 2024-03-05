@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="reflect">Reflect</button>
+    <span id="result"> nickel </span>
+
+    <script>
+      let count = 0
+      const button = document.querySelector('#reflect')
+      const output = document.querySelector('#result')
+      const userNames = ['nickel', 'dime', 'quarter', 'loonie']
+
+      button.addEventListener('click', function () {
+        if (count > lastIndex) {
+          return
+        }
+        count += 1
+        output.innerHTML = userNames[count]
+      })
+    </script>
+  </body>
+</html>

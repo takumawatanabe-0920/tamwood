@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="num">0</span>
+    <button id="increment">Increment</button>
+    <script>
+      const num = document.querySelector('#num')
+
+      let count = 0
+      const button = document.querySelector('#increment')
+      button.addEventListener('click', function () {
+        if (count >= 6) {
+          return
+        }
+        count += 1
+        num.innerHTML = count
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="output"></span>
+    <button id="button">Next Page</button>
+    <script>
+      const output = document.querySelector('#output')
+      const button = document.querySelector('#button')
+      let count = 0
+      const maxCount = 5
+      output.textContent = count
+
+      button.addEventListener('click', function () {
+        if (count > maxCount) {
+          return
+        }
+        count += 1
+        output.textContent = count
+        if (count === 0) {
+          output.textContent = 'First Page'
+        } else if (count === maxCount) {
+          output.textContent = 'Last Page'
+        }
+      })
+    </script>
+  </body>
+</html>

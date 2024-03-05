@@ -8,15 +8,139 @@
   <body>
     <div id="quiz">
       <h2 id="question">What is the capital of France?</h2>
-      <input type="radio" name="answer" value="paris" />
-      <label for="paris">Paris</label>
-      <input type="radio" name="answer" value="london" />
-      <label for="london">London</label>
-      <input type="radio" name="answer" value="berlin" />
-      <label for="berlin">Berlin</label>
-      <input type="radio" name="answer" value="madrid" />
-      <label for="madrid">Madrid</label>
-      <p id="result"></p>
+      <input type="radio" name="answer" value="Paris" id="answer1" />
+      <label for="Paris">Paris</label>
+      <input type="radio" name="answer" value="London" id="answer2" />
+      <label for="London">London</label>
+      <input type="radio" name="answer" value="Berlin" id="answer3" />
+      <label for="Berlin">Berlin</label>
+      <input type="radio" name="answer" value="Madrid" id="answer4" />
+      <label for="Madrid">Madrid</label>
+
+      <div>
+        <button id="prev-page-button">Prev Page</button>
+        <button id="next-page-button">Next Page</button>
+      </div>
+
+      <div>
+        <div id="page">Page 1</div>
+      </div>
     </div>
+
+    <div id="quiz-result"></div>
+
+    <script>
+      let currentPage = 0
+      const page = document.querySelector('#page')
+      const quizContent = [
+        {
+          question: 'What is the capital of France?',
+          answer1: 'Paris',
+          answer2: 'London',
+          answer3: 'Berlin',
+          answer4: 'Madrid',
+          correctAnswer: 'Paris',
+        },
+        {
+          question: 'What is the capital of Germany?',
+          answer1: 'Munich',
+          answer2: 'Berlin',
+          answer3: 'Hamburg',
+          answer4: 'Frankfurt',
+          correctAnswer: 'Berlin',
+        },
+        {
+          question: 'What is the capital of Canada?',
+          answer1: 'Vancouver',
+          answer2: 'Toronto',
+          answer3: 'Ottawa',
+          answer4: 'Montreal',
+          correctAnswer: 'Ottawa',
+        },
+        {
+          question: 'What is the capital of Korea?',
+          answer1: 'Daegu',
+          answer2: 'Busan',
+          answer3: 'Incheon',
+          answer4: 'Seoul',
+          correctAnswer: 'Seoul',
+        },
+      ]
+
+      const answers = []
+
+      const quizQuestion = document.querySelector('#question')
+      const quizAnswers = document.querySelectorAll('input[type="radio"]')
+
+      const button = document.querySelector('#next-page-button')
+      button.addEventListener('click', function () {
+        pushAnswer(1)
+        pushAnswer(2)
+        pushAnswer(3)
+        pushAnswer(4)
+        console.log({ answers })
+
+        if (currentPage === quizContent.length - 1) {
+          showResult()
+          return
+        }
+        currentPage++
+        setQuizContent(currentPage)
+      })
+
+      const prevButton = document.querySelector('#prev-page-button')
+      prevButton.addEventListener('click', function () {
+        if (currentPage === 0) {
+          return
+        }
+        currentPage--
+        setQuizContent(currentPage)
+      })
+
+      function pushAnswer(num) {
+        if (document.getElementById(`answer${num}`).checked) {
+          answers[currentPage] = document.getElementById(`answer${num}`).value
+        }
+      }
+
+      function setQuizContent(c_page) {
+        quizQuestion.innerHTML = quizContent[c_page].question
+        page.innerHTML = `Page ${c_page + 1}`
+
+        quizAnswers[0].nextElementSibling.textContent =
+          quizContent[c_page].answer1
+        quizAnswers[0].value = quizContent[c_page].answer1
+        quizAnswers[1].nextElementSibling.textContent =
+          quizContent[c_page].answer2
+        quizAnswers[1].value = quizContent[c_page].answer2
+        quizAnswers[2].nextElementSibling.textContent =
+          quizContent[c_page].answer3
+        quizAnswers[2].value = quizContent[c_page].answer3
+        quizAnswers[3].nextElementSibling.textContent =
+          quizContent[c_page].answer4
+        quizAnswers[3].value = quizContent[c_page].answer4
+
+        // Reset the radio buttons
+        for (let i = 0; i < quizAnswers.length; i++) {
+          quizAnswers[i].checked = false
+        }
+      }
+
+      function showResult() {
+        const quizContainer = document.querySelector('#quiz')
+        const quizResult = document.querySelector('#quiz-result')
+
+        quizContainer.style.display = 'none'
+        quizResult.textContent = 'You finished the quiz!'
+
+        for (let i = 0; i < quizContent.length; i++) {
+          if (answers[i] === quizContent[i].correctAnswer) {
+            quizResult.textContent += `Question ${i + 1} is correct!`
+          } else {
+            quizResult.textContent += `Question ${i + 1} is incorrect!`
+          }
+        }
+      }
+    </script>
   </body>
 </html>
