@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slide">
+        <img src="img/cat.png" alt="" />
+      </div>
+
+      <div class="slide">
+        <img src="img/city.jpg" alt="" />
+      </div>
+
+      <div class="slide">
+        <img src="img/port-3.jpg" alt="" />
+      </div>
+
+      <div class="slide">
+        <img src="img/port-4.jpg" alt="" />
+      </div>
+
+      <div class="slide">
+        <img src="img/unicorn.jpg" alt="" />
+      </div>
+
+      <button class="btn btn-next">></button>
+      <button class="btn btn-prev"><</button>
+    </div>
+
+    <script>
+      // const doMatch = (a, b, yourMathFunction) => {
+      //   // arrow function
+      //   return yourMathFunction(a, b)
+      // }
+
+      // doMatch(2, 3, function (a, b) {
+      //   // not arrow function
+      //   return a + b
+      // })
+
+      // doMatch(2, 3, (a, b) => {
+      //   // arrow function
+      //   return a + b
+      // })
+
+      // const ask = (question, yes, no) => {
+      //   if (confirm(question)) yes()
+      //   else no()
+      // }
+
+      // ask(
+      //   'Do you agree?',
+      //   () => alert('You agreed.'),
+      //   () => alert('You canceled the execution.')
+      // )
+
+      const AppendLala = (str, callBack) => {
+        callBack(`${str}lala`)
+      }
+
+      AppendLala('hogehoge', (str) => {
+        console.log(str)
+        return str
+      })
+    </script>
+  </body>
+</html>

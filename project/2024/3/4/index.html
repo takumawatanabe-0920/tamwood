@@ -18,6 +18,7 @@
       <label for="Madrid">Madrid</label>
 
       <div>
+        <button id="reset-button">Reset answer</button>
         <button id="prev-page-button">Prev Page</button>
         <button id="next-page-button">Next Page</button>
       </div>
@@ -141,6 +142,13 @@
           }
         }
       }
+
+      const resetButton = document.querySelector('#reset-button')
+      resetButton.addEventListener('click', function () {
+        for (let i = 0; i < quizAnswers.length; i++) {
+          quizAnswers[i].checked = false
+        }
+      })
     </script>
   </body>
 </html>
