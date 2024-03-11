@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Switch Divs</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 300px;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: 1px solid black;
+        margin: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container-1">
+      <div class="square" onclick="toggleColor(this)"></div>
+      <div class="square" onclick="toggleColor(this)"></div>
+      <div class="square" onclick="toggleColor(this)"></div>
+    </div>
+    <p id="status">All white</p>
+    <div class="container" id="container-2">
+      <div class="square" onclick="toggleColor(this)"></div>
+      <div class="square" onclick="toggleColor(this)"></div>
+      <div class="square" onclick="toggleColor(this)"></div>
+    </div>
+    <p id="status">All white</p>
+    <div class="container" id="container-3">
+      <div class="square" onclick="toggleColor(this)"></div>
+      <div class="square" onclick="toggleColor(this)"></div>
+      <div class="square" onclick="toggleColor(this)"></div>
+    </div>
+    <p id="status">All white</p>
+
+    <script>
+      function toggleColor(element) {
+        const containerId = element.parentNode.id
+        element.style.backgroundColor =
+          element.style.backgroundColor === 'gray' ? 'white' : 'gray'
+        updateStatus(containerId)
+      }
+
+      function updateStatus(elementId) {
+        const squares = document.querySelectorAll(`#${elementId} .square`)
+        const allWhite = Array.from(squares).every(
+          (el) => el.style.backgroundColor === 'white'
+        )
+        const allGray = Array.from(squares).every(
+          (el) => el.style.backgroundColor === 'gray'
+        )
+
+        const statusElement = document.getElementById(
+          `${elementId}`
+        ).nextElementSibling
+
+        if (allWhite) {
+          statusElement.innerText = 'All white'
+        } else if (allGray) {
+          statusElement.innerText = 'All gray'
+        } else {
+          statusElement.innerText = 'Mixed'
+        }
+      }
+    </script>
+  </body>
+</html>

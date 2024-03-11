@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Application</title>
+    <style>
+      .note {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        margin-top: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="noteInput">Enter your note (max 100 characters):</label><br />
+    <textarea id="noteInput" rows="4" cols="50"></textarea><br />
+    <button onclick="submitNote()">Submit Note</button>
+    <button onclick="clearNotes()">Clear Notes</button>
+
+    <div id="notesContainer"></div>
+
+    <script>
+      function submitNote() {
+        const noteInput = document.getElementById('noteInput')
+        if (noteInput.value.length > 100) {
+          alert('Note cannot exceed 100 characters.')
+          return
+        }
+
+        const notesContainer = document.getElementById('notesContainer')
+        notesContainer.innerHTML = ''
+
+        const noteDiv = document.createElement('div')
+        noteDiv.className = 'note'
+        noteDiv.textContent = noteInput.value
+        notesContainer.appendChild(noteDiv)
+      }
+
+      function clearNotes() {
+        const notesContainer = document.getElementById('notesContainer')
+        notesContainer.innerHTML = ''
+      }
+    </script>
+  </body>
+</html>
