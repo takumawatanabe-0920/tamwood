@@ -5,3 +5,12 @@ const allNamesStartWithT = names.every((name) => {
 })
 
 console.log({ allNamesStartWithT })
+
+// assignment1
+const array1 = ['red', 'blue', 'green']
+
+const output = array1.reduce((acc, cul) => {
+  return acc + cul.length
+}, 0)
+
+console.log({ output })

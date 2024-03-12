@@ -21,19 +21,19 @@
     </style>
   </head>
   <body>
-    <div class="container" id="container-1">
+    <div class="container">
       <div class="square" onclick="toggleColor(this)"></div>
       <div class="square" onclick="toggleColor(this)"></div>
       <div class="square" onclick="toggleColor(this)"></div>
     </div>
     <p id="status">All white</p>
-    <div class="container" id="container-2">
+    <div class="container">
       <div class="square" onclick="toggleColor(this)"></div>
       <div class="square" onclick="toggleColor(this)"></div>
       <div class="square" onclick="toggleColor(this)"></div>
     </div>
     <p id="status">All white</p>
-    <div class="container" id="container-3">
+    <div class="container">
       <div class="square" onclick="toggleColor(this)"></div>
       <div class="square" onclick="toggleColor(this)"></div>
       <div class="square" onclick="toggleColor(this)"></div>
@@ -42,14 +42,13 @@
 
     <script>
       function toggleColor(element) {
-        const containerId = element.parentNode.id
         element.style.backgroundColor =
           element.style.backgroundColor === 'gray' ? 'white' : 'gray'
-        updateStatus(containerId)
+        updateStatus(element.parentNode)
       }
 
-      function updateStatus(elementId) {
-        const squares = document.querySelectorAll(`#${elementId} .square`)
+      function updateStatus(parentNode) {
+        const squares = parentNode.querySelectorAll('.square')
         const allWhite = Array.from(squares).every(
           (el) => el.style.backgroundColor === 'white'
         )
@@ -57,9 +56,7 @@
           (el) => el.style.backgroundColor === 'gray'
         )
 
-        const statusElement = document.getElementById(
-          `${elementId}`
-        ).nextElementSibling
+        const statusElement = parentNode.nextElementSibling
 
         if (allWhite) {
           statusElement.innerText = 'All white'

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <button onclick="exampleFunction()">Click me</button>
+
+    <form action="https://wwww.google.com">
+      <input type="checkbox" name="" id="checkbox-a" />
+      <input type="checkbox" name="" id="checkbox-b" />
+      <input type="checkbox" name="" id="checkbox-c" />
+      <button onclick="exampleFunction2(event)">Click me2</button>
+    </form>
+
+    <script>
+      function exampleFunction(event) {
+        alert('Hello World')
+      }
+
+      function exampleFunction2(event) {
+        event.preventDefault()
+
+        toggleCheckbox('checkbox-a')
+        toggleCheckbox('checkbox-b')
+        toggleCheckbox('checkbox-c')
+
+        function toggleCheckbox(id) {
+          document.getElementById(id).checked =
+            !document.getElementById(id).checked
+        }
+      }
+    </script>
+  </body>
+</html>
