@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="menu">
+      <button id="button1">Button 1</button>
+      <button id="button2">Button 2</button>
+      <button id="button3">Button 3</button>
+    </div>
+
+    <p id="paragraph1">Good morning</p>
+    <p id="paragraph2">Good afternoon</p>
+    <p id="paragraph3">Good night</p>
+
+    <script>
+      $(document).ready(function () {
+        $('#button1').click(function () {
+          $('#paragraph1').show()
+          $('#paragraph2').hide()
+          $('#paragraph3').hide()
+        })
+
+        $('#button2').click(function () {
+          $('#paragraph1').hide()
+          $('#paragraph2').show()
+          $('#paragraph3').hide()
+        })
+
+        $('#button3').click(function () {
+          $('#paragraph1').hide()
+          $('#paragraph2').hide()
+          $('#paragraph3').show()
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -4,20 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <form action="https://wwww.google.com">
-      <p>Inside the form</p>
-      <button onclick="hideForm(event)">Click me</button>
-    </form>
+    <h1>Working with selector</h1>
 
     <script>
-      function hideForm(event) {
-        event.preventDefault()
-        $('form').hide()
-      }
+      $('h1').html()
+      $('h1').html('Hello World')
+      $('h1').html('Hello World!!!<span style="color: red">!!!</span>')
     </script>
   </body>
 </html>

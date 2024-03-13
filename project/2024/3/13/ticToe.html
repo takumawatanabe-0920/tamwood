@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 50px;
+      }
+
+      .circle {
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        border: 2px solid;
+        margin: auto;
+      }
+
+      .cross {
+        width: 70%;
+        height: 70%;
+        position: relative;
+      }
+
+      .cross-one,
+      .cross-two {
+        position: absolute;
+        background-color: black;
+        width: 2px;
+        height: 100px;
+      }
+
+      .cross-one {
+        transform: rotate(45deg);
+        left: 50px;
+        top: -10px;
+      }
+
+      .cross-two {
+        transform: rotate(-45deg);
+        left: 50px;
+        top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <table>
+      <tr>
+        <td id="0"></td>
+        <td id="1"></td>
+        <td id="2"></td>
+      </tr>
+      <tr>
+        <td id="3"></td>
+        <td id="4"></td>
+        <td id="5"></td>
+      </tr>
+      <tr>
+        <td id="6"></td>
+        <td id="7"></td>
+        <td id="8"></td>
+      </tr>
+    </table>
+    <p id="text"></p>
+    <button id="reset">Reset</button>
+
+    <script>
+      // tdをクリックすると、そのtdにXが表示される。次の人は、Oを表示する。偶数は⚪️、奇数は❌
+      // 既にクリックされたtdは、クリックできないようにする。
+      // 3つ並んだら、その人の勝ちと表示する。横、縦、斜め 8通り
+      // 9回クリックされたら、引き分けと表示する。
+      // リセットボタンを押すと、全てのtdが空になる。
+      // tdをクリックしたら、すべてのTDの情報をチェックして上記の判定をする。
+      let count = 0
+
+      function handleClick(tdElement) {
+        const td = $(tdElement)
+        const id = td.attr('id')
+
+        const alreadyClicked = $(`#${id} div`).length > 0
+        if (alreadyClicked) {
+          alert('Already clicked!')
+          return
+        }
+
+        const isWin = $('#text').text() !== ''
+        if (isWin) {
+          alert('Game is already finished!')
+          return
+        }
+
+        const emptyField = td.text() === ''
+        if (emptyField) {
+          const clickFirstUser = count % 2 === 0
+          if (clickFirstUser) {
+            td.html('<div class="circle"></div>')
+          } else {
+            td.html(
+              '<div class="cross"><div class="cross-one"></div><div class="cross-two"></div></div>'
+            )
+          }
+
+          checkWinner(count % 2 === 0 ? 0 : 1)
+
+          const Limit = 8
+          if (count >= Limit) {
+            $('#text').text('Draw!')
+          }
+
+          // next turn
+          count++
+        }
+      }
+
+      function checkWinner(whoClicked) {
+        const tdValues = getTdValues()
+        const name = whoClicked === 0 ? 'O' : 'X'
+
+        if (horizontalCheck(tdValues)) {
+          $('#text').text(`Player ${name} won!`)
+        } else if (verticalCheck(tdValues)) {
+          $('#text').text(`Player ${name} won!`)
+        } else if (diagonalCheck(tdValues)) {
+          $('#text').text(`Player ${name} won!`)
+        }
+      }
+
+      function getTdValues() {
+        const firstValue = $('#0 div').attr('class')
+        const secondValue = $('#1 div').attr('class')
+        const thirdValue = $('#2 div').attr('class')
+        const forthValue = $('#3 div').attr('class')
+        const fifthValue = $('#4 div').attr('class')
+        const sixthValue = $('#5 div').attr('class')
+        const seventhValue = $('#6 div').attr('class')
+        const eighthValue = $('#7 div').attr('class')
+        const ninthValue = $('#8 div').attr('class')
+
+        return {
+          firstValue,
+          secondValue,
+          thirdValue,
+          forthValue,
+          fifthValue,
+          sixthValue,
+          seventhValue,
+          eighthValue,
+          ninthValue,
+        }
+      }
+
+      function horizontalCheck({
+        firstValue,
+        secondValue,
+        thirdValue,
+        forthValue,
+        fifthValue,
+        sixthValue,
+        seventhValue,
+        eighthValue,
+        ninthValue,
+      }) {
+        // 1, 2, 3
+        // 4, 5, 6
+        // 7, 8, 9
+        if (
+          firstValue === secondValue &&
+          secondValue === thirdValue &&
+          firstValue != null &&
+          secondValue != null &&
+          thirdValue != null
+        ) {
+          return true
+        }
+
+        if (
+          forthValue === fifthValue &&
+          fifthValue === sixthValue &&
+          forthValue != null &&
+          fifthValue != null &&
+          sixthValue != null
+        ) {
+          return true
+        }
+
+        if (
+          seventhValue === eighthValue &&
+          eighthValue === ninthValue &&
+          seventhValue != null &&
+          eighthValue != null &&
+          ninthValue != null
+        ) {
+          return true
+        }
+
+        return false
+      }
+
+      function verticalCheck({
+        firstValue,
+        secondValue,
+        thirdValue,
+        forthValue,
+        fifthValue,
+        sixthValue,
+        seventhValue,
+        eighthValue,
+        ninthValue,
+      }) {
+        // 1, 4, 7
+        // 2, 5, 8
+        // 3, 6, 9
+        if (
+          firstValue === forthValue &&
+          forthValue === seventhValue &&
+          firstValue != null &&
+          forthValue != null &&
+          seventhValue != null
+        ) {
+          return true
+        }
+
+        if (
+          secondValue === fifthValue &&
+          fifthValue === eighthValue &&
+          secondValue != null &&
+          fifthValue != null &&
+          eighthValue != null
+        ) {
+          return true
+        }
+
+        if (
+          thirdValue === sixthValue &&
+          sixthValue === ninthValue &&
+          thirdValue != null &&
+          sixthValue != null &&
+          ninthValue != null
+        ) {
+          return true
+        }
+
+        return false
+      }
+
+      function diagonalCheck({
+        firstValue,
+        thirdValue,
+        fifthValue,
+        seventhValue,
+        ninthValue,
+      }) {
+        // 1, 5, 9
+        // 3, 5, 7
+        if (
+          firstValue === fifthValue &&
+          fifthValue === ninthValue &&
+          firstValue != null &&
+          fifthValue != null &&
+          ninthValue != null
+        ) {
+          return true
+        }
+
+        if (
+          thirdValue === fifthValue &&
+          fifthValue === seventhValue &&
+          thirdValue != null &&
+          fifthValue != null &&
+          seventhValue != null
+        ) {
+          return true
+        }
+
+        return false
+      }
+
+      $('td').click(function () {
+        handleClick(this)
+      })
+
+      $('#reset').click(function () {
+        $('td').html('')
+        $('#text').text('')
+        count = 0
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div style="background-color: gray">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+
+    <script>
+      $('div')
+        .eq(0)
+        .click(function () {
+          console.log('div1 clicked')
+          $(this).width(100)
+        })
+
+      $('div')
+        .eq(1)
+        .click(function () {
+          console.log('div2 clicked')
+          $(this).text('Member 2')
+        })
+
+      $('div')
+        .eq(2)
+        .click(function () {
+          $(this).css('background-color', 'red')
+        })
+    </script>
+  </body>
+</html>

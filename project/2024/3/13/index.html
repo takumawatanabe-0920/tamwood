@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h3 id="country"></h3>
+    <h3 id="name"></h3>
+    <span id="output"></span>
+
+    <input type="text" id="input" />
+    <button>Search</button>
+
+    <script>
+      const API_KEY = '2e96d8be9efc4aacae2205348241303'
+      const BASE_URL = 'http://api.weatherapi.com/v1'
+
+      function handleSearch(event) {
+        const input = document.getElementById('input').value
+        const modifiedUrl = `${BASE_URL}/current.json?key=${API_KEY}&q=${input}`
+        console.log(modifiedUrl, 'modifiedUrl', input)
+
+        fetch(modifiedUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log({ location: data.location, current: data.current })
+
+            const { country, name } = data.location
+            const { text, icon } = data.current.condition
+
+            document.getElementById('country').innerText = country
+            document.getElementById('name').innerText = name
+            document.getElementById(
+              'output'
+            ).innerHTML = `${text}<img src="${icon}" alt="${text}" />`
+          })
+          .catch((error) => console.error(error))
+      }
+
+      $('button').click(handleSearch)
+    </script>
+  </body>
+</html>
