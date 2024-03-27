@@ -76,12 +76,6 @@
     <button id="reset">Reset</button>
 
     <script>
-      // tdをクリックすると、そのtdにXが表示される。次の人は、Oを表示する。偶数は⚪️、奇数は❌
-      // 既にクリックされたtdは、クリックできないようにする。
-      // 3つ並んだら、その人の勝ちと表示する。横、縦、斜め 8通り
-      // 9回クリックされたら、引き分けと表示する。
-      // リセットボタンを押すと、全てのtdが空になる。
-      // tdをクリックしたら、すべてのTDの情報をチェックして上記の判定をする。
       let count = 0
 
       function handleClick(tdElement) {
@@ -105,6 +99,7 @@
           const clickFirstUser = count % 2 === 0
           if (clickFirstUser) {
             td.html('<div class="circle"></div>')
+            $('#victor').text(a)
           } else {
             td.html(
               '<div class="cross"><div class="cross-one"></div><div class="cross-two"></div></div>'
@@ -128,10 +123,13 @@
         const name = whoClicked === 0 ? 'O' : 'X'
 
         if (horizontalCheck(tdValues)) {
+          alert(`Player ${name} won!`)
           $('#text').text(`Player ${name} won!`)
         } else if (verticalCheck(tdValues)) {
+          alert(`Player ${name} won!`)
           $('#text').text(`Player ${name} won!`)
         } else if (diagonalCheck(tdValues)) {
+          alert(`Player ${name} won!`)
           $('#text').text(`Player ${name} won!`)
         }
       }

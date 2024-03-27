@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Parameter</h1>
+    <div id="name">name</div>
+    <div id="age">age</div>
+    <div id="city">city</div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search)
+      for (const param of searchParams) {
+        console.log(param)
+        const paramName = param[0]
+        const paramValue = param[1]
+        console.log(paramName, paramValue)
+        switch (paramName) {
+          case 'name':
+            console.log('name:', paramValue)
+            document.getElementById('name').textContent = paramValue
+            break
+          case 'age':
+            console.log('age:', paramValue)
+            document.getElementById('age').textContent = paramValue
+            break
+          case 'city':
+            console.log('city:', paramValue)
+            document.getElementById('city').textContent = paramValue
+            break
+          default:
+            console.log('No such parameter exists')
+        }
+      }
+    </script>
+  </body>
+</html>

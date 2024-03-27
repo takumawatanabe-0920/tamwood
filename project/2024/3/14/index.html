@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <small class="error-message" id="nameError"></small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <small class="error-message" id="emailError"></small>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" />
+          <small class="error-message" id="phoneError"></small>
+        </div>
+        <div class="form-group">
+          <label class="custom-radio" for="home-radio"
+            >Home
+            <input
+              type="radio"
+              id="home-radio"
+              name="category"
+              value="home"
+              checked
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="custom-radio" for="business-radio"
+            >Business
+            <input
+              type="radio"
+              id="business-radio"
+              name="category"
+              value="business"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <small class="error-message" id="categoryError"></small>
+        </div>
+        <div class="form-group" id="companyNameInput">
+          <label for="message">Company Name:</label>
+          <input type="text" id="companyName" name="companyName" />
+          <small class="error-message" id="companyNameError"></small>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <small class="error-message" id="messageError"></small>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

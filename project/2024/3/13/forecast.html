@@ -13,6 +13,7 @@
     <span id="output"></span>
 
     <input type="text" id="input" />
+    <input type="text" id="input2" />
     <button>Search</button>
 
     <script>
@@ -21,16 +22,25 @@
 
       function handleSearch(event) {
         const input = document.getElementById('input').value
-        const modifiedUrl = `${BASE_URL}/current.json?key=${API_KEY}&q=${input}&days=14`
-        console.log(modifiedUrl, 'modifiedUrl', input)
+        const tomorrow = document.getElementById('input2').value
+        const modifiedUrl = `${BASE_URL}/forecast.json?key=${API_KEY}&q=${input}&days=${
+          tomorrow === 'tomorrow' ? 2 : 14
+        }`
 
         fetch(modifiedUrl)
           .then((response) => response.json())
           .then((data) => {
-            console.log({ location: data.location, current: data.current })
+            console.log({
+              location: data.location,
+              current: data.current,
+              forecast: data.forecast,
+            })
 
             const { country, name } = data.location
             const { text, icon } = data.current.condition
+            const { forecast } = data
+
+            console.log({ tomorrow: forecast.forecastday[1] })
 
             document.getElementById('country').innerText = country
             document.getElementById('name').innerText = name
